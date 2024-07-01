@@ -7,7 +7,7 @@ export const Bubble = ({ text, imgSrc, selected, onClick }) => {
       className={`${styles.bubble} ${selected ? styles.selectedOption : ""}`}
       onClick={onClick}
     >
-      <img src={imgSrc} width={25} height={25} />
+      <img src={imgSrc} />
       <span className={styles.bubbleText}>{text}</span>
     </div>
   );
