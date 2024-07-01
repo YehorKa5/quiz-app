@@ -1,0 +1,23 @@
+.button {
+  padding: 16px 0;
+  color: #fff;
+  background-color: #e4229c;
+  font-size: 17px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 100px;
+  transition: background-color 0.2s ease-in-out;
+
+  &:not(.disabled) {
+    &:hover {
+      background-color: #9e2070;
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+}

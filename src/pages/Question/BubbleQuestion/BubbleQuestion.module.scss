@@ -1,0 +1,13 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.questionsWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 36px;
+  justify-content: space-around;
+}

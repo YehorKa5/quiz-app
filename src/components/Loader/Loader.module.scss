@@ -1,0 +1,107 @@
+.circularProgress {
+  --size: 250px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 12px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+  animation: progress-animation 5s linear forwards;
+
+  circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
+
+    &.bg {
+      stroke: #e8eaf2;
+    }
+
+    &.fg {
+      transform: rotate(-90deg);
+      transform-origin: var(--half-size) var(--half-size);
+      stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+      transition: stroke-dasharray 0.3s linear 0s;
+      stroke: #e4229c;
+    }
+  }
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes progress-animation {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 100;
+  }
+}
+// .circularProgress {
+//   --size: 250px;
+//   --half-size: calc(var(--size) / 2);
+//   --stroke-width: 12px;
+//   --radius: calc((var(--size) - var(--stroke-width)) / 2);
+//   --circumference: calc(var(--radius) * pi * 2);
+//   --dash: calc((var(--progress) * var(--circumference)) / 100);
+//   animation: progress-animation 5s linear forwards;
+// }
+
+// .circularProgress circle {
+//   cx: var(--half-size);
+//   cy: var(--half-size);
+//   r: var(--radius);
+//   stroke-width: var(--stroke-width);
+//   fill: none;
+//   stroke-linecap: round;
+// }
+
+// .circularProgress circle.bg {
+//   stroke: #e8eaf2;
+// }
+
+// .circularProgress circle.fg {
+//   transform: rotate(-90deg);
+//   transform-origin: var(--half-size) var(--half-size);
+//   stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+//   transition: stroke-dasharray 0.3s linear 0s;
+//   stroke: #e4229c;
+// }
+
+// @property --progress {
+//   syntax: "<number>";
+//   inherits: false;
+//   initial-value: 0;
+// }
+
+// @keyframes progress-animation {
+//   from {
+//     --progress: 0;
+//   }
+//   to {
+//     --progress: 100;
+//   }
+// }
+
+.loaderWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaderPercentage {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: 800;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

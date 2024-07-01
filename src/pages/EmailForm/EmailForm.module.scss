@@ -1,0 +1,26 @@
+@import "../../mediaMixin.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+
+.emailFormContent {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding-top: 72px;
+}
+
+.policyText {
+  color: #b6b8c3;
+  font-size: 18px;
+  text-align: center;
+
+  @include _680 {
+    font-size: 13px;
+  }
+}

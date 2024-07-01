@@ -1,0 +1,36 @@
+.textField {
+  padding: 26px 20px;
+  border-radius: 16px;
+  border: 2px solid #36173d;
+  background: #36173d;
+  font-size: 17px;
+  color: #fff;
+  outline: none;
+
+  &::placeholder {
+    color: #c4c8cc80;
+  }
+
+  &:not(.errorField) {
+    &:focus,
+    &:active {
+      outline: none;
+      border: 2px solid #e4229b;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.error {
+  font-size: 16px;
+  color: #ff0000;
+}
+
+.errorField {
+  border: 2px solid #ff0000;
+}

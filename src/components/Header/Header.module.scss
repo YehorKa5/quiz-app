@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  padding: 12px 0px;
+}
+
+.arrowBack {
+  position: absolute;
+  left: 0;
+  top: 10;
+  cursor: pointer;
+}
+
+.progressStep {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: center;
+  color: #e8eaf2;
+}
+
+.activeStep {
+  color: #e4229c;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}

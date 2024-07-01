@@ -1,0 +1,12 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.questionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

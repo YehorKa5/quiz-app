@@ -1,0 +1,14 @@
+.questionWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+
+.questionContent {
+  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}

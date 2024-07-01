@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  gap: 40px;
+}
+
+.processingText {
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+}
